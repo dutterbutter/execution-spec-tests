@@ -770,9 +770,9 @@ class Transaction(
             self.max_fee_per_gas = TransactionDefaults.max_fee_per_gas
         if self.ty >= 2 and self.max_priority_fee_per_gas is None:
             self.max_priority_fee_per_gas = TransactionDefaults.max_priority_fee_per_gas
-        if self.ty < 2:
-            assert self.max_fee_per_gas is None, "max_fee_per_gas must be None"
-            assert self.max_priority_fee_per_gas is None, "max_priority_fee_per_gas must be None"
+        # if self.ty < 2:
+        #     assert self.max_fee_per_gas is None, "max_fee_per_gas must be None"
+        #     assert self.max_priority_fee_per_gas is None, "max_priority_fee_per_gas must be None"
 
         if self.ty == 3 and self.max_fee_per_blob_gas is None:
             self.max_fee_per_blob_gas = 1
